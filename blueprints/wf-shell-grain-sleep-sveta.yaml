@@ -15,6 +15,10 @@ inputs:
     default: vido-review3
   sleep_secs:
     type: string
+  regex:
+    type: string
+    pattern: '^[a-zA-Z]+$'  # regex pattern that prohibits anything other than letters
+    validation-description: 'only letters allowed'
 
 grains:
   sleep:
