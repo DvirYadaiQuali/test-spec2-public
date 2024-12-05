@@ -13,7 +13,7 @@ workflow:
 inputs:
   agent:
     type: agent
-    default: vido-prod
+    default: vido-review3
 
   regex:
     type: string
