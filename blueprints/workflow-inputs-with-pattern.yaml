@@ -15,6 +15,9 @@ inputs:
     type: agent
     default: vido-review3
 
+  sleep_secs:
+    type: string
+
   regex:
     type: string
     pattern: '^[a-zA-Z]+$'  # regex pattern that prohibits anything other than letters
@@ -25,7 +28,7 @@ grains:
     kind: shell
     spec:
       agent:
-        name: '{{.inputs.agent_name}}'
+        name: '{{.inputs.agent}}'
       activities:
         deploy:
           commands:
