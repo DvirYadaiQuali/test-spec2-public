@@ -12,10 +12,7 @@ workflow:
       overridable: false
     - type: cron
       cron: '*/5 * * * *'
-      overridable: false
-    - type: cron
-      cron: '*/5 * * * *'
-      overridable: false
+      overridable: true
   
 inputs:
   input1:
