@@ -17,6 +17,7 @@ inputs:
     default: 'yaml-default1'
   input2:
     type: string
+    default: 'yaml-default2'
   agent:
     type: agent
     description: "agent name" 
