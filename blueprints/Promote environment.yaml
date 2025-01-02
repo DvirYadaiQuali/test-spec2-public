@@ -9,6 +9,13 @@ description: |
 workflow:  
   scope: env
   labels-selector: promote
+  triggers:
+    - type: cron
+     cron: '*/5 * * * *'
+      overridable: false
+    - type: cron
+      cron: '*/5 * * * *'
+      overridable: true
   
 inputs:
   Target Environment:
