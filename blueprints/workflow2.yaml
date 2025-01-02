@@ -11,6 +11,7 @@ workflow:
     - type: event
       event:
         - Environment Extended
+      overridable: true
     #- type: cron
     # cron: '*/5 * * * *'
     #  overridable: false
