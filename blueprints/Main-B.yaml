@@ -1,0 +1,20 @@
+spec_version: 2
+description: description
+
+inputs:
+  agent:
+    type: agent
+  input_to_output:
+    type: string
+
+grains:
+  b_grain:
+    kind: blueprint
+    spec:
+      source:
+        store: your_repo_here
+        path: blueprints/Sub-B.yaml
+      inputs:
+        - agent: '{{ .inputs.agent }}'
+        - input_1: 'tomer'
+        - input_2: '{{ .inputs.input_to_output }}'

@@ -1,0 +1,30 @@
+spec_version: 2
+description: description
+
+inputs:
+  agent:
+    type: agent
+  input_1:
+    type: string
+  input_2:
+    type: string
+
+outputs:
+  output_from_input:
+    value: '{{.inputs.input_1}}'
+  output_from_grain:
+    value: '{{.grains.t_grain.outputs.my_output}}'
+
+grains:
+  t_grain:
+    kind: terraform
+    spec:
+      agent:
+        name: '{{.inputs.agent}}'
+      source:
+        store: your_repo_here
+        path: terraform/input_to_output
+      inputs:
+        - my_input: '{{.inputs.input_2}}'
+      outputs:
+        - my_output
