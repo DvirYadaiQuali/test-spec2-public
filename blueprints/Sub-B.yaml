@@ -22,7 +22,7 @@ grains:
       agent:
         name: '{{.inputs.agent}}'
       source:
-        store: your_repo_here
+        store: test-spec2-public
         path: terraform/input_to_output
       inputs:
         - my_input: '{{.inputs.input_2}}'
