@@ -2,7 +2,14 @@ spec_version: 2
 description: manual blueprint for terraform module hello_world
 # blueprint inputs can be provided by the user, API or CI plugin when creating an environment from this blueprint.
 workflow: 
-  scope: space
+  scope: env
+  triggers:
+    - type: cron
+     cron: '*/5 * * * *'
+      overridable: false
+    - type: cron
+      cron: '*/5 * * * *'
+      overridable: true
     
 inputs:
   my_name:
