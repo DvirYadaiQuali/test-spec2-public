@@ -12,7 +12,7 @@ grains:
     kind: blueprint
     spec:
       source:
-        store: your_repo_here
+        store: test-spec2-public
         path: blueprints/Sub-B.yaml
       inputs:
         - agent: '{{ .inputs.agent }}'
