@@ -9,7 +9,7 @@ inputs:
     default: '60'
 
 outputs:
-  out1:
+  out11:
     value: '{{ "now" | date: "%H:%m:%s" }}'  
 
 grains:
@@ -24,4 +24,4 @@ grains:
             - name: sleep_cmd
               command: "sleep {{ .inputs.sleep_secs }}"
               outputs:
-                - output
+                - output1
