@@ -1,5 +1,8 @@
 spec_version: 2-preview
 description: deploy s3 bucket
+inputs:
+  agent:
+    type: "agent"
 
 outputs:
   bucket_1:
@@ -12,7 +15,7 @@ grains:
       source:
         path: https://github.com/QualiNext/test-spec2-public//terraform/s3-custom
       agent:
-        name: eks
+        name: '{{ .inputs.agent }}'
       inputs:
         - region: us-west-1
         - name: 'bucket-update-test-2-s3-{{ sandboxid | downcase }}'
