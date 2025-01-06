@@ -24,4 +24,4 @@ grains:
             - name: sleep_cmd
               command: "sleep {{ .inputs.sleep_secs }}"
               outputs:
-                - output1
+                - output
