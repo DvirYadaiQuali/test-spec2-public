@@ -3,6 +3,9 @@ spec_version: 2-preview
 inputs:
   compute_service_name:
     type: agent
+  test:
+    type: string
+    default: 'a'
 
 outputs:
   output1:
