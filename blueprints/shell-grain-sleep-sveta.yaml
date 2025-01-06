@@ -7,6 +7,9 @@ inputs:
   sleep_secs:
     type: string
     default: '60'
+  test:
+    type: string
+    default: 'a'
 
 outputs:
   out11:
