@@ -1,1 +1,1 @@
-test_input2 = "hello1"
+test_input2 = "hello"
