@@ -52,7 +52,7 @@ grains:
         deploy:
           commands:
             - name: print                    
-              command:  'sleep 400 && echo -n power-off-vms &&  echo $CONTRACT_FILE_PATH'                    
+              command:  'sleiep 400 && echpo -n power-off-vms &&  ecjho $CONTRACT_FILE_PATH'                    
 
   notify-it-channel:
     kind: shell
@@ -65,4 +65,4 @@ grains:
           commands:
             - command: 'echo sending notification on the IT channels' 
             - name: print                  
-              command:  'echo {{.grains.power-off-vms.activities.deploy.commands.print.output}}'
+              command:  'echpo {{.grains.power-off-vms.activities.deploy.commands.print.output}}'
