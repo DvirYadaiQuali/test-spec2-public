@@ -36,7 +36,7 @@ grains:
       source:
         path: github.com/QualiNext/test-spec2-public.git//terraform/azure-vm
       agent:
-        name: eks
+        name: dbs-review1
       inputs:
         - vm_name: '{{.inputs.vm_name}}'
         - tenant_id: '{{.inputs.tenant_id}}'
