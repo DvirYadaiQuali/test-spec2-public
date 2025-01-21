@@ -4,7 +4,6 @@ description: Workflow to power on Azure VMs via built-in action
 workflow:
   scope: env
   label-selector: Azure-VM
-  labels-selector: Azure-VM
   triggers:
     - type: event
       event:
