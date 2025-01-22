@@ -1,6 +1,11 @@
 spec_version: 2
 description: Workflow to power on Azure VMs via built-in action
 
+inputs:
+  host_name:
+    type: agent
+    description: "execution host name"
+
 workflow:
   scope: env
   label-selector: Azure-VM
@@ -17,4 +22,4 @@ grains:
       source:
         path: https://github.com/QualiTorque/torque-actions.git//resource/azure-power-on-vm-tf.yaml
       agent:
-        name: 'dbs-review1'  
+        name: '{{.inputs.host_name}}'  
