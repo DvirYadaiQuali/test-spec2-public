@@ -9,6 +9,14 @@ workflow:
       event:
         - 'Environment Ending Failed'
 
+inputs:
+  my_name:
+    type: string
+    default: Test Doe
+  message:
+    type: string
+    default: Test Doe message
+
 grains:
   power_on_azvm:
     kind: ansible
