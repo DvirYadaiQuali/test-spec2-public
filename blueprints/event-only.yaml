@@ -2,13 +2,13 @@ spec_version: 2
 description: Workflow to power on Azure VMs via built-in action
 
 inputs:
-  host_name:
+  agent:
     type: agent
-    description: "execution host name"
-
+    
 workflow:
   scope: env
   label-selector: Azure-VM
+  labels-selector: Azure-VM
   triggers:
     - type: event
       event:
@@ -22,4 +22,4 @@ grains:
       source:
         path: https://github.com/QualiTorque/torque-actions.git//resource/azure-power-on-vm-tf.yaml
       agent:
-        name: '{{.inputs.host_name}}'  
+        name: '{{ .inputs.agent }}'  
