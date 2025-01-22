@@ -8,7 +8,6 @@ inputs:
 workflow:
   scope: env
   label-selector: Azure-VM
-  labels-selector: Azure-VM
   triggers:
     - type: cron
       cron: '0 8 * * *' # every day at 8:00
