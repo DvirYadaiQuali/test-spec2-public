@@ -7,6 +7,9 @@ inputs:
   sleep_secs:
     type: string
     default: '60'
+  parameter:
+    type: parameter
+    parameter-name: 'torque_token'
 
 outputs:
   out1:
