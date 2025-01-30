@@ -7,6 +7,7 @@ inputs:
   parameter:
     type: 'parameter'
     parameter-name: 'torque_token'
+    default: a
 
 workflow:
   scope: env
