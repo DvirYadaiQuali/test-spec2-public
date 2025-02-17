@@ -7,9 +7,6 @@ inputs:
   sleep_secs:
     type: string
     default: '60'
-  parameter:
-    type: parameter
-    parameter-name: 'torque_token'
 
 outputs:
   out1:
@@ -21,6 +18,8 @@ grains:
     spec:
       agent:
         name: '{{.inputs.agent_name}}'
+      inputs:
+        - test.input2: 'input2'
       activities:
         deploy:
           commands:
